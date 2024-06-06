@@ -1,5 +1,6 @@
 import time
 import threading
+import argparse
 from socket import socket, AF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM
 from winreg import OpenKey, EnumKey, QueryValueEx, HKEY_LOCAL_MACHINE
 
@@ -8,6 +9,9 @@ from winreg import OpenKey, EnumKey, QueryValueEx, HKEY_LOCAL_MACHINE
 # press Ctrl + Shift + M at any time from desktop to run
 # defaults to Stereo audio
 
+parser = argparse.ArgumentParser()
+parser.add_argument("--timeout", help="Time to wait for connection", type=int, default=10, required=False)
+args = parser.parse_args()
 
 REG_BTH_ADDRS = r"SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Devices"
 CHANNEL = 1
@@ -49,6 +53,6 @@ def connect_to_airpods(airpods_mac_addr: str):
 
 thread = threading.Thread(target=connect_to_airpods, args=(airpods_mac_addr,), daemon=True)
 thread.start()
-thread.join(10)  # wait for 10 seconds
+thread.join(args.timeout)
 if thread.is_alive():
     print("Connection to AirPods timed out.")
