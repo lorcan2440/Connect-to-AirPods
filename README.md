@@ -1,7 +1,7 @@
 # Connect-to-AirPods
 
 Automatically connects paired Apple AirPods to a Windows computer via Bluetooth. Uses only built-in Python modules.
-The Python script `connect_to_airpods.py` can be run on its own to connect, or called from [AutoHotKey 2](https://www.autohotkey.com/v2/) via the script `connect_to_airpods.ahk`.
+The Python script `connect_to_airpods.py` can be run on its own to connect, or called from [AutoHotKey 2](https://www.autohotkey.com/v2/) via the script `connect_to_airpods.ahk` to automatically connect when a keyboard shortcut is pressed.
 
 ## Requirements
 - OS: Windows 10 or 11
