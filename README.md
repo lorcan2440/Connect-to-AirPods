@@ -12,7 +12,7 @@ The Python script `connect_to_airpods.py` can be run on its own to connect, or c
 
 1. Save the two scripts `connect_to_airpods.py` and `connect_to_airpods.ahk` somewhere on your computer.
 2. Create a shortcut to `connect_to_airpods.ahk` and move it to the Windows startup folder: `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\`
-3. Edit the file `connect_to_airpods.ahk` and change the path in the `ScriptPath` to the full path of the Python script `connect_to_airpods.py` and save.
+3. Edit the file `connect_to_airpods.ahk` and change the path in the `ScriptPath` variable to the full path of the Python script `connect_to_airpods.py` and save.
 4. Restart your computer and once back, check the AutoHotKey script is running by going to the system tray, right-click the green 'H' icon, Open, and see if `connect_to_airpods.ahk` has returned.
 5. With your AirPods in your ears, to connect your AirPods, press `Ctrl + Shift + M`.
 
