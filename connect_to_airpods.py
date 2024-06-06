@@ -3,11 +3,13 @@ import socket
 import winreg
 
 # script to be called from AutoHotKey in the startup directory
+# computer needs to be already paired with the AirPods
 # press Ctrl + Shift + M at any time from desktop to run
+# defaults to Stereo audio
 
 
 REG_BTH_ADDRS = r'SYSTEM\CurrentControlSet\Services\BTHPORT\Parameters\Devices'
-CHANNEL = 2  # stereo: 1, mono: 2?
+CHANNEL = 1
 
 # Find the MAC address of the AirPods
 keys = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, REG_BTH_ADDRS)
