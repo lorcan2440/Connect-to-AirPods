@@ -4,6 +4,7 @@
 ^+m::  ; Ctrl + Shift + M
 	{
         ScriptPath := "C:\Users\lnick\Documents\Programming\Projects\Connect2Airpods\connect_to_airpods.py"
-        RunWait("python " ScriptPath)
+        Timeout := 10  ; seconds to allow bluetooth connection attempt
+        RunWait("python " ScriptPath " --timeout " Timeout)
         return
     }
